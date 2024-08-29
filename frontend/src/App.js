@@ -26,7 +26,9 @@ function App() {
 
   const fetchCars = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/cars");
+      const response = await axios.get(
+        "https://https://car-inventory-server-theta.vercel.app/cars"
+      );
       setCars(response.data);
     } catch (error) {
       console.log("Error fetching cars:", error);
@@ -37,13 +39,16 @@ function App() {
     const currentYear = new Date().getFullYear();
     const age = currentYear - parseInt(carToAdd.year);
     const newCar = { ...carToAdd, age };
-    await axios.post("http://localhost:5000/cars", newCar);
+    await axios.post(
+      "https://car-inventory-server-theta.vercel.app/cars",
+      newCar
+    );
     fetchCars();
   };
 
   const deleteCar = async (id) => {
     await axios
-      .delete(`http://localhost:5000/cars/${id}`)
+      .delete(`https://car-inventory-server-theta.vercel.app//cars/${id}`)
       .then(() => {
         const filteredCars = cars.filter((car) => car._id !== id);
         setCars(filteredCars);
@@ -75,7 +80,10 @@ function App() {
   const updateMarkedCar = async () => {
     try {
       if (markedCar) {
-        await axios.put(`http://localhost:5000/cars/${markedCar}`, carToUpdate);
+        await axios.put(
+          `https://car-inventory-server-theta.vercel.app//cars/${markedCar}`,
+          carToUpdate
+        );
         setMarkedCar(null);
         setCarToUpdate({
           id: "",
