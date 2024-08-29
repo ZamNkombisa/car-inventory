@@ -1,0 +1,114 @@
+/* Set default styles for the body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define styles for logo */
+.app-logo img {
+  display: block;
+  margin: auto;
+}
+
+/* Define styles for the container element */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Define styles for heading elements */
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  margin-right: 10px;
+}
+
+/* Define styles for forms */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+/* Define styles for text input fields */
+input[type="text"] {
+  flex: 1 1 250px;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Define styles for action buttons */
+.action-button, button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 6px;
+  margin-right: 8px;
+}
+
+/* Define hover effect for buttons */
+.action-button:hover, button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/* Define styles for tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Define styles for table headers and data cells */
+th, td {
+  text-align: left;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Define styles for table headers */
+th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: normal;
+}
+
+/* Define alternating row colors for table rows */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Define hover effect for table rows */
+tr:hover {
+  background-color: #ddd;
+}
+
+/* Define styles for the last data cell in table rows */
+td:last-child {
+  text-align: center;
+}
+
+/* Define styles for delete buttons */
+button[type="button"] {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Define hover effect for delete buttons */
+button[type="button"]:hover {
+  background-color: #da190b;
+}
