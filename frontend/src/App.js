@@ -10,7 +10,7 @@ function App() {
     model: "",
     registrationNumber: "",
     currentOwner: "",
-    year: "", // Added year for calculating age
+    year: "",
   });
   const [carToUpdate, setCarToUpdate] = useState({
     id: "",
@@ -27,7 +27,7 @@ function App() {
   const fetchCars = async () => {
     try {
       const response = await axios.get(
-        "https://https://car-inventory-server-theta.vercel.app/cars"
+        "https://car-inventory-server-zuye.onrender.com/cars"
       );
       setCars(response.data);
     } catch (error) {
@@ -40,7 +40,7 @@ function App() {
     const age = currentYear - parseInt(carToAdd.year);
     const newCar = { ...carToAdd, age };
     await axios.post(
-      "https://car-inventory-server-theta.vercel.app/cars",
+      "https://car-inventory-server-zuye.onrender.com/cars",
       newCar
     );
     fetchCars();
@@ -48,7 +48,7 @@ function App() {
 
   const deleteCar = async (id) => {
     await axios
-      .delete(`https://car-inventory-server-theta.vercel.app//cars/${id}`)
+      .delete(`https://car-inventory-server-zuye.onrender.com/cars/${id}`)
       .then(() => {
         const filteredCars = cars.filter((car) => car._id !== id);
         setCars(filteredCars);
@@ -81,7 +81,7 @@ function App() {
     try {
       if (markedCar) {
         await axios.put(
-          `https://car-inventory-server-theta.vercel.app//cars/${markedCar}`,
+          `https://car-inventory-server-zuye.onrender.com/cars/${markedCar}`,
           carToUpdate
         );
         setMarkedCar(null);
